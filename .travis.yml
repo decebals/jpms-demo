@@ -1,4 +1,6 @@
 language: java
+# trusty is required for oraclejdk9
+dist: trusty
 jdk:
     - oraclejdk9
     - openjdk9
