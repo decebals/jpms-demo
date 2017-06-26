@@ -10,6 +10,20 @@ It's a preparation for a more ambitious objective: add support for JPMS/JIGSAW i
 My opinion is that JPMS is an excellent solution for modularization of Java Platform but it adds to small value for modularization of Java applications.  
 I hope that PF4J can be integrated with JPMS and it will fill the gap on the modularization of Java applications.
 
+Structure
+-------------------
+The demo application is the same demo as [PF4J demo](https://github.com/decebals/pf4j/tree/master/demo).
+The directories layout is:
+- `api` (declares [Greeting](https://github.com/decebals/jpms-demo/blob/master/api/src/main/java/ro/fortsoft/jpms/demo/api/Greeting.java) as extension-point)
+- `app` (contains [Boot](https://github.com/decebals/jpms-demo/blob/master/app/src/main/java/ro/fortsoft/jpms/demo/Boot.java) class as the main class of application)
+- `hello` (provides an implementation for `Greeting`, [HelloGreeting](https://github.com/decebals/jpms-demo/blob/master/hello/src/main/java/ro/fortsoft/jpms/demo/hello/HelloGreeting.java))
+- `welcome` (provides another implementation for `Greeting`, [WelcomeGreeting](https://github.com/decebals/jpms-demo/blob/master/welcome/src/main/java/ro/fortsoft/jpms/demo/welcome/WelcomeGreeting.java))
+
+I use `ServiceLoader` and `providers` feature from [module-info.java](https://github.com/decebals/jpms-demo/blob/master/hello/src/main/java/module-info.java) to declare services/extensions.
+
+The project comes with a trivial [run.sh](https://github.com/decebals/jpms-demo/blob/master/run.sh) linux script that allows you to
+run the demo from command line.
+ 
 How to build and run
 -------------------
 Requirements: 
