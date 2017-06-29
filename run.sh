@@ -7,4 +7,4 @@ mvn clean package
 printf "\nRunning JPMS demo:\n"
 
 # run demo
-java --module-path mods -m jpms.demo.app/ro.fortsoft.jpms.demo.Boot
+java --module-path mods --module jpms.demo.app/ro.fortsoft.jpms.demo.Boot
