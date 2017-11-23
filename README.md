@@ -10,6 +10,8 @@ It's a preparation for a more ambitious objective: add support for JPMS/JIGSAW i
 My opinion is that JPMS is an excellent solution for modularization of Java Platform but it adds to small value for modularization of Java applications.  
 I hope that PF4J can be integrated with JPMS and it will fill the gap on the modularization of Java applications.
 
+__Note:__ The project uses only Java 9 as dependency. PF4J is not involved in this demo.
+
 Structure
 -------------------
 The demo application is the same demo as [PF4J demo](https://github.com/decebals/pf4j/tree/master/demo).
